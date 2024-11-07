@@ -1,0 +1,170 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    overflow: none;
+}
+
+div {
+    display: block;
+}
+
+.humanLink {
+    padding: 2vh;
+    top: 0px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    animation: slideDown 1s forwards;
+}
+
+
+.humanLink a {
+    font-family: "Rubik Wet Paint", system-ui;
+    color: orange;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    font-stretch: expanded;
+    transition: transform 0.3s ease;
+}
+
+.humanLink a:visited,a:active {
+    color: orange;
+}
+
+
+
+/*Smooth hover animation for the navbar*/
+.humanLink a:hover {
+    transform: scale(1.2);
+    font-size: 24px
+}
+
+
+/*Navbar slidedown animation*/
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+
+
+body{
+    background-image: url('halloween.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#donateButton{
+    background-color: red;
+    color: white;
+}
+
+#cutePumpkin{
+    animation-name: move3;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    position: relative;
+    animation-delay: 1s;
+    opacity: 0;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+}
+  
+  @keyframes move3{
+    from{
+        top: 100px;
+      opacity: 0%;
+    }
+    to{
+        
+    top: -900px;
+      opacity: 100%;
+    }
+  }
+
+  /*transform: skew(15deg, 15deg);*/
+
+#cutePumpkin:active{
+    transform: rotate(360deg);
+}
+
+
+
+/*text*/
+.chat-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 800px;
+    margin-top: -1300px;
+  }
+  .chat-bubble {
+    max-width: 500px;
+    padding: 15px;
+    background-color: orange;
+    color: white;
+    border: 3px solid white;
+    border-radius: 15px;
+    font-family: "Tiny5", sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    box-shadow: 3px 3px 0 white;
+    margin-bottom: 10px;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 5s;
+    opacity: 0;
+  }
+
+  .chat-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    border: 3px solid white;
+    border-top-left-radius: 50%;
+    transform: rotate(70deg);
+    box-shadow: -3px -3px 0 white;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  #jumpscare {
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    width: 100%; 
+    height: 100%; 
+    cursor: pointer; 
+    visibility: hidden;
+}

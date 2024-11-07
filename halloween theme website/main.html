@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Tiny5&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    
+    <title>Document</title>
+
+</head>
+<body>
+
+<navbar>
+    <div class="humanLink">
+        <a href="https://www.playit-online.com/game/haunted-mansion-escape-1-the-attic/">HAUNTED MANSION</a>
+        <a href="https://www.crazygames.com/game/haunted-school---horror-game">HAUNTED SCHOOL</a>
+        <a href="https://aslangames.itch.io/clown-house">CLOWN HOUSE</a>
+        <a href="https://realmpact.itch.io/leftovers">LEFT OVERS</a>
+        <a href="https://ezra-szanton.itch.io/be-honest">BE HONEST</a>
+        <a href="#" input type="button" onclick="jumpscare();" id="donateButton">MORE TREAT</a>
+    </div>
+</navbar>
+    <canvas width = "100%" height = "100%" id="batCanvas"></canvas>
+    <img id = "cutePumpkin" src = "cutepumpkin.svg" draggable="false">
+
+    
+
+    <div class="chat-container">
+        <div class="chat-bubble">
+          Trick or Treat! Which one? Click and hold on me for a trick,<br> or play the games above me for the treat! Want more? Click the red button on top of the navbar!
+        </div>
+      </div>
+
+      <div id="jumpScare"></div>
+
+      <img id="jumpscare" src="jumpscare.jpg"/>
+    <audio id="scream" src="jumpscareAudio.mp3">
+
+
+    <script src = "mainfunction.js"></script>
+    <script src = "jumpscare.js"></script>
+
+   
+</body>
+</html>
